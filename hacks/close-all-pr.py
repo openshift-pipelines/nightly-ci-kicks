@@ -65,20 +65,3 @@ if not pullreqs:
 for pull in pullreqs:
     print("Closing: " + pull['url'])
     reqit(pull['url'], "PATCH", data={"state": "closed"})
-
-# conn = http.client.HTTPSConnection("api.github.com")
-# data = {"state": "closed"}
-# r = conn.request(
-#     "PATCH",
-#     comment_url,
-#     body=json.dumps(data),
-#     headers={
-#         "User-Agent": "OpenShift CI Pipeline Commenter",
-#         "Authorization": "Bearer " + os.environ["GITHUBTOKEN"],
-#     })
-# r1 = conn.getresponse()
-# if not str(resp.status).startswith("2"):
-#     print("Error: %d" % (resp.status))
-#     print(resp.read())
-# else:
-#     print("GIthub PR #" + os.environ["PR"] + " has been closed!")
