@@ -17,7 +17,6 @@ import http.client
 import json
 import subprocess
 import sys
-ALLOWED_REPOS = ["openshift-pipelines/nightly-ci-kicks"]
 
 
 def reqit(url, method, data=None, successmsg=None):
@@ -53,13 +52,9 @@ repo = subprocess.Popen(
 repo = repo.replace("git@github.com:", "")
 repo = repo.replace("https://github.com/", "")
 
-if repo not in ALLOWED_REPOS:
-    print(f"{repo} not in {ALLOWED_REPOS}")
-    sys.exit(1)
-
 pullreqs = json.loads(
     reqit(
-        "https://api.github.com/repos/chmouel/scratchpad/pulls",
+        f"https://api.github.com/repos/{repo}/pulls",
         "GET",
     ))
 
