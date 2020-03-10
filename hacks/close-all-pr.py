@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Author: Chmouel Boudjnah <chmouel@chmouel.com>
-#
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
 # a copy of the License at
@@ -13,11 +11,13 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
+#
+# Close ALL PR in a github REPO
 import http.client
 import json
 import subprocess
 import sys
-ALLOWED_REPOS = ["chmouel/scratchpad"]
+ALLOWED_REPOS = ["openshift-pipelines/nightly-ci-kicks"]
 
 
 def reqit(url, method, data=None, successmsg=None):
@@ -29,14 +29,13 @@ def reqit(url, method, data=None, successmsg=None):
     if data:
         data = json.dumps(data)
 
-    conn.request(
-        method,
-        url,
-        body=data,
-        headers={
-            "User-Agent": "OpenShift CI Pipeline Commenter",
-            "Authorization": "Bearer " + token,
-        })
+    conn.request(method,
+                 url,
+                 body=data,
+                 headers={
+                     "User-Agent": "OpenShift CI Pipeline Commenter",
+                     "Authorization": "Bearer " + token,
+                 })
 
     resp = conn.getresponse()
     if not str(resp.status).startswith("2"):
