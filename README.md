@@ -6,6 +6,6 @@ When you create a new PR against it this will be picked by the OpenShift-CI trig
 
 ## Can I kick it ?
 
-** Yes you can !!! **
+***Yes you can !!!***
 
 Any PR would do it no need for fancy tags or other stuff to pick this up....
