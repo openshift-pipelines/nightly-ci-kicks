@@ -2,7 +2,17 @@
 
 This repository is what controls the OpenShift Pipelines CI
 
-When you create a new PR against it this will be picked by the OpenShift-CI triggers instal to start the CI, it will give you a link to your PR on how to follow the build..
+When you create a new PR against this repo it will get picked by the OpenShift-CI triggers and starts the nightly CI.
+
+This will comment on your PR with a link to the openshift console to follow the build.
+
+If you don't have access to the openshift console, you need to : 
+
+1. Get access to the knative devint cluster https://github.com/openshift-knative/cluster-devint#github-team-membership
+2. Request access from `chmouel` or `vincent` to issue this command : 
+```
+oc adm policy add-role-to-user admin ${KERBEROS_USERNAME} -n ci-openshift-pipelines
+```
 
 ## Can I kick it ?
 
