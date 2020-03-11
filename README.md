@@ -35,3 +35,7 @@ Any PR would do it no need for fancy tags or other stuff to pick this up....
 ### CI failed
 
 ![Alt Text](https://i.makeagif.com/media/2-22-2016/UCZp1c.gif)
+
+### CI failed with infra issue
+
+![infra issue](https://media0.giphy.com/media/k81IetGx7P6i8GJrOD/giphy.gif)
