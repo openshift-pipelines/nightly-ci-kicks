@@ -32,10 +32,10 @@ Any PR would do it no need for fancy tags or other stuff to pick this up....
 
 ![Alt Text](https://i.pinimg.com/originals/cb/b4/a6/cbb4a65a2f45c0e068f817820ee6e720.gif)
 
-### CI failed
+### CI failed miserably
 
 ![Alt Text](https://i.makeagif.com/media/2-22-2016/UCZp1c.gif)
 
-### CI failed with infra issue
+### CI get stopped by infra issues
 
 ![infra issue](https://media0.giphy.com/media/k81IetGx7P6i8GJrOD/giphy.gif)
