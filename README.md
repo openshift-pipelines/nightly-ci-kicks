@@ -1,4 +1,6 @@
-# Nightly CI PR Kicks
+# THIS REPOSITORY IS NOT USED ANYMORE
+
+## Nightly CI PR Kicks
 
 This repository is what controls the OpenShift Pipelines CI
 
